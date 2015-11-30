@@ -1,0 +1,28 @@
+@charset "utf-8";
+/*
+ * TITLE 变量
+ * DESC 基本每个界面都会用到
+ * AUTHOR Vicky
+ * DATETIME 2015-8-12 9:26:44
+ */
+
+$margin_bottom:60px;
+$main_border:1px solid #dedede;
+$bc_main:#dedede;	//边框的主要颜色
+/* 
+ * 字体颜色
+ */
+$c_em:#000; // 强调字体颜色
+$c_main: #333; // 主要字体主颜色
+$c_light: #666; // 次要字体颜色
+$c_lighter: #999; // 更轻的字体颜色咯  
+$c_highlight:#cc0007; // 高亮字体颜色
+
+
+
+/*
+ * z-index的值
+ */
+$z_overlay:999;	// 弹出窗遮罩层的z-index值
+$z_popWrap: $z_overlay + 1;	// 弹出面板（弹出遮罩上的一层）的z-index，需大于遮罩层
+$z_footerMenu: $z_overlay - 1; // footer-menu的z-index，需小于遮罩层的z-index

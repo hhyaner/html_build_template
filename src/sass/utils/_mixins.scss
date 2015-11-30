@@ -1,0 +1,91 @@
+@charset "utf-8";
+@mixin display($para:flex) {
+    @if $para==flex {
+        display: -webkit-box; // 旧的伸缩盒模型
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex; // 新的伸缩盒模型
+        display: flex;
+    }
+}
+
+@mixin flex($para) {
+    -webkit-box-flex: $para;
+    -webkit-flex: $para;
+    -ms-flex: $para;
+    flex: $para;
+}
+
+
+/*
+ * 定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。
+ */
+
+@mixin align-items($para) {
+    -webkit-box-align: $para;
+    -moz-box-align: $para;
+    -ms-box-align: $para;
+    box-align: $para;
+    -webkit-align-items: $para;
+    align-items: $para;
+}
+
+/*
+ * 设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。
+ */
+
+@mixin justify-content($para) {
+    -webkit-box-pack: $para;
+    -moz-box-pack: $para;
+    -ms-box-pack: $para;
+    box-pack: $para;
+    -webkit-justify-content: $para;
+    justify-content: $para;
+}
+
+@mixin flex-direction($para){
+    -webkit-flex-direction:$para;
+    -ms-flex-direction:$para;
+    flex-direction:$para;
+}
+
+/* 
+ * form控件的样式,如checkbox,radio
+ * 有些界面仅用checkbox样式或radio样式
+ */
+
+@mixin formWiddgets($paras) {
+    $form_bg_size:40px;
+    @each $para in $paras {
+        @if($para==checkbox) {
+            input[type='checkbox'] {
+                width: 20px;
+                height: 20px;
+                border: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-appearance: none;
+                border-radius: 2px;
+                background: image-url('t_form.png') no-repeat 0 -20px;
+                background-size: $form_bg_size;
+            }
+            input[type='checkbox']:checked {
+                background-position: 0 0;
+            }
+        }
+        @if $para==radio {
+            input[type='radio'] {
+                width: 16px;
+                height: 16px;
+                border: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-appearance: none;
+                border-radius: 2px;
+                background: image-url('t_form.png') no-repeat -20px -20px;
+                background-size: $form_bg_size;
+            }
+            input[type='radio']:checked {
+                background-position: -20px 0;
+            }
+        }
+    }
+}
