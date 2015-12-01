@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>仁兰私人订制-与众不同</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div class="rl-page">
+        @@include('header.html')
+        <!-- banner -->
+        <div class="banner-slider">
+            <!-- 图片太宽，建议使用渐隐渐显的方式，改变.slider-panel的z-index/z-index/display -->
+            <ul class="slider-conn">
+                <li class="slider-panel">
+                    <a href="#" style="background-image:url(pic/banner_1920-706.png)"></a>
+                </li>
+                <li class="slider-panel">
+                    <a href="#" style="background-image:url(pic/banner_1920-706.png)"></a>
+                </li>
+            </ul>
+            <div class="slider-nav">
+                <!-- 设计稿上未设计 -->
+            </div>
+        </div>
+        <div class="custom-container">
+        	<!-- 动态设置其宽度为(curWidth+leftVal)，left为(1920-curWidth)/2-->
+            <div class="custom-wrap" style="width:1660px; left:-250px; ">
+                <div class="step" style="margin-top:115px;">
+                    <img src="pic/custom-step.jpg" alt="">
+                </div>
+                <div class="new" style="margin-top:100px;">
+                    <img src="pic/new.jpg" alt="">
+                </div>
+                <div class=""></div>
+            </div>
+        </div>
+        <div class="step">
+        </div>
+        <!-- /banner -->
+        @@include('footer.html')
+    </div>
+</body>
+
+</html>

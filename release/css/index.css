@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/*
+ * @title 变量
+ * @desc 基本每个界面都会用到
+ * @author VictoriaZhang
+ * @datetime 2015-12-1 9:41:34
+ */
+/* 
+ * 字体颜色
+ */
+/* 
+ * 字体大小
+ * f: font-size
+ */
+/*
+ * z-index的值
+ */
+/*
+ * @title:网站的reset和基础通用样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-11-30 16:23:37;
+ */
+body {
+  font: 12px/1.5 Tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+  -webkit-text-size-adjust: none;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+input, textarea, select, button {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+img {
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+em, i, address {
+  font-style: normal;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+input {
+  vertical-align: middle;
+}
+
+img {
+  border: 0 none;
+  height: auto;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+.fc {
+  clear: both;
+  width: 100%;
+}
+
+.fc::after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  content: '';
+}
+
+.fc-hl {
+  color: #cc0006;
+}
+
+.elps {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.hideMode {
+  display: none !important;
+}
+
+/*按钮的主要样式*/
+.btn-submit {
+  display: inline-block;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background-color: #cc0007;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-submit:active {
+  background-color: #ae0007;
+}
+
+.btn-submit:visited {
+  color: #fff;
+}
+
+/*
+ * @title:头部的样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-1 10:28:03;
+ */
+.siteNav {
+  background-color: #f2f2f2;
+  height: 40px;
+}
+.siteNav .menu {
+  float: left;
+}
+.siteNav .menu-hd {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  _display: inline;
+  _zoom: 1;
+}
+.siteNav a {
+  color: #666;
+}
+.siteNav a:hover {
+  color: #b4802f;
+}
+.siteNav .sn-separator {
+  margin: 0 10px;
+}
+.siteNav .loginInfo {
+  margin-left: 30px;
+}
+
+.siteNav-bd {
+  position: relative;
+}
+
+.siteNav-bd,
+.mainNav-bd {
+  margin: 0 auto;
+  width: 1200px;
+  color: #666;
+}
+
+.siteNav-left {
+  float: left;
+}
+
+.siteNav-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.siteNav-right .menu-hd a {
+  display: inline-block;
+  margin-left: 24px;
+}
+.siteNav-right .menu-name {
+  float: left;
+}
+
+.index-icons-sprite, .icon-arrow-down {
+  background-image: url('../images/index-icons-sd5da9f499e.png');
+  background-repeat: no-repeat;
+}
+
+.icon-arrow-down {
+  float: left;
+  margin: 17.5px 6px;
+  width: 8px;
+  height: 5px;
+  background-position: 0 0;
+}
+
+.mainNav {
+  height: 114px;
+  line-height: 1;
+}
+.mainNav .mainNav-wrap {
+  width: 100%;
+}
+.mainNav .logo {
+  width: 250px;
+  margin-left: -100%;
+  float: left;
+  margin-top: 36px;
+}
+.mainNav .nav-wrap {
+  width: 100%;
+  float: left;
+}
+.mainNav .nav {
+  margin-top: 60px;
+  margin-left: 326px;
+  font-size: 18px;
+}
+.mainNav .nav li {
+  float: left;
+  margin-right: 88px;
+}
+.mainNav .nav li.cur a {
+  color: #b4802f;
+}
+.mainNav .nav a {
+  color: #000;
+}
+.mainNav .nav a:hover {
+  color: #b4802f;
+}
+
+/*
+ * @title:网站的reset和基础通用样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-11-30 16:23:37;
+ */
+.rl-page {
+  min-width: 1200px;
+}
+
+.banner-slider {
+  height: 706px;
+  background-color: #f2f2f2;
+}
+
+.slider-conn {
+  position: relative;
+  width: 100%;
+  height: 706px;
+  overflow: hidden;
+}
+
+.slider-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.slider-panel a {
+  display: block;
+  width: 100%;
+  height: 706px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.custom-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-wrap {
+  position: relative;
+  overflow: hidden;
+}

@@ -1,0 +1,109 @@
+@import 'utils/variable.scss';
+@import 'base/base.scss';
+
+/*
+ * @title:头部的样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-1 10:28:03;
+ */
+
+.siteNav {
+    background-color: #f2f2f2;
+    height: 40px;
+    .menu {
+        float: left;
+    }
+    .menu-hd {
+        font-size: $fs_main;
+        height: 40px;
+        line-height: 40px;
+        _display:inline;
+        _zoom:1;
+    }
+    a {
+        color: $c_light;
+        &:hover {
+            color: $c_highlight;
+        }
+    }
+    .sn-separator {
+        margin: 0 10px;
+    }
+    .loginInfo {
+        margin-left: 30px;
+    }
+}
+.siteNav-bd{
+	position: relative;
+}
+.siteNav-bd,
+.mainNav-bd {
+    margin: 0 auto;
+    width: $cw_main;
+    color: $c_light;
+}
+
+.siteNav-left {
+    float: left;
+}
+
+.siteNav-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+    .menu-hd a {
+    	display: inline-block;
+        margin-left: 24px;
+    }
+    .menu-name{
+		float: left;
+    }
+}
+
+@import "compass/utilities/sprites";
+@import "index-icons/*.png";
+.icon-arrow-down {
+	float: left;
+	margin: (40 - index-icons-sprite-height(arrow-down))/2 6px;
+    width: index-icons-sprite-width(arrow-down);
+    height: index-icons-sprite-height(arrow-down);
+    @include index-icons-sprite(arrow-down);
+}
+
+.mainNav {
+    height: 114px;
+    line-height: 1;
+    // mainNav-wrap专为ie6左侧显示不出来设置的。
+    .mainNav-wrap {
+        width: 100%;
+    }
+    .logo {
+        width: 250px;
+        margin-left: -100%;
+        float: left;
+        margin-top: 36px;
+    }
+    .nav-wrap {
+        width: 100%;
+        float: left;
+    }
+    .nav {
+        margin-top: 60px;
+        margin-left: 326px;
+        font-size: 18px;
+        li {
+            float: left;
+            margin-right: 88px;
+        }
+        li.cur a {
+            color: $c_highlight;
+        }
+        a {
+            color: $c_em;
+            &:hover {
+                color: $c_highlight;
+            }
+        }
+    }
+}

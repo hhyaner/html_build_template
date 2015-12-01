@@ -1,0 +1,54 @@
+@import 'utils/_variable.scss';
+@import 'base/_base.scss';
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+
+/*
+ * @title:网站的reset和基础通用样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-11-30 16:23:37;
+ */
+.rl-page{
+	min-width: $cw_main;
+}
+
+// banner
+.banner-slider{
+	height: 706px;
+	background-color: #f2f2f2;
+}
+.slider-conn{
+	position: relative;
+	width: 100%;
+	height: 706px;
+	overflow: hidden;
+}
+.slider-panel{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	a{
+		display: block;
+		width: 100%;
+		height: 706px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+}
+// end--> banner
+
+// 
+.custom-container{
+	width: 100%;
+	overflow: hidden;
+}
+.custom-wrap{
+	position: relative;
+}
+.custom-conn{
+	// position: relative;
+}
+
