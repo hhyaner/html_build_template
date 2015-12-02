@@ -4,51 +4,151 @@
 @import 'layout/_footer.scss';
 
 /*
- * @title:网站的reset和基础通用样式;
+ * @title:首页样式;
  * @desc:;
  * @author: VictoriaZhang;
  * @datetime: 2015-11-30 16:23:37;
  */
-.rl-page{
-	min-width: $cw_main;
+
+.rl-page {
+    min-width: $cw_main;
 }
 
 // banner
-.banner-slider{
-	height: 706px;
-	background-color: #f2f2f2;
+.banner-slider {
+    height: 706px;
+    background-color: #f2f2f2;
 }
-.slider-conn{
-	position: relative;
-	width: 100%;
-	height: 706px;
-	overflow: hidden;
-}
-.slider-panel{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	a{
-		display: block;
-		width: 100%;
-		height: 706px;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
 
+.slider-conn {
+    position: relative;
+    width: 100%;
+    height: 706px;
+    overflow: hidden;
 }
+
+.slider-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    a {
+        display: block;
+        width: 100%;
+        height: 706px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
 // end--> banner
-
 // 
-.custom-container{
-	width: 100%;
-	overflow: hidden;
-}
-.custom-wrap{
-	position: relative;
-}
-.custom-conn{
-	// position: relative;
+.custom-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
+.custom-wrap {
+    width: 1920px;
+    position: relative;
+}
+
+
+/*首页商品推荐*/
+
+.item-box {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.item-bd {
+    // position: relative;
+    width: $cw_main;
+    margin: 0 auto;
+}
+
+.odd-item,
+.even-item {
+    position: relative;
+}
+
+.odd-item {
+    .item-conn {
+        float: right;
+    }
+}
+
+.even-item {
+    .item-conn {
+        float: left;
+    }
+}
+
+.rcmd-wrap {
+    .web-name {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: $c_lighter;
+    }
+    .item-conn {
+        width: 660px;
+        margin-top: 170px;
+    }
+    .product-title {
+        margin-top: 20px;
+        font-size: 60px;
+        color: #202020;
+        font-weight: $ft-bold;
+    }
+    .product-paras {
+        margin-top: 50px;
+    }
+    .product-digest {
+        margin-top: 20px;
+        font-size: 28px;
+        color: #595959;
+        line-height: 40px;
+    }
+    .acts {
+        margin-top: 60px;
+    }
+    .btn-link-a,
+    .btn-link-b,
+    .btn-link-c,
+    .btn-link-d {
+        font-size: 22px;
+    }
+    .btn-link-a,
+    .btn-link-c,
+    .btn-link-d {
+        display: inline-block;
+        width: 270px;
+        text-align: center;
+    }
+    .btn-link-a {
+        height: 70px;
+        line-height: 70px;
+        background-color: $c_highlight;
+        color: #fff;
+        border-radius: 35px;
+    }
+    .btn-link-b {
+        color: #202020;
+    }
+    .btn-link-c {
+        border: 2px solid $c_highlight;
+        color: $c_highlight;
+        height: 66px;
+        line-height: 66px;
+    }
+    .btn-link-d {
+        border: 1px solid #e0e0e0;
+        color: $c_highlight;
+        height: 66px;
+        line-height: 66px;
+        background-color: #fff;
+    }
+}

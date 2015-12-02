@@ -10,7 +10,11 @@
  */
 /* 
  * 字体大小
- * f: font-size
+ * fs: font-size
+ */
+/*
+ * 字体粗细
+ * ft:font-weight
  */
 /*
  * z-index的值
@@ -145,6 +149,7 @@ img {
   line-height: 40px;
   _display: inline;
   _zoom: 1;
+  font-family: "Microsoft Yahei";
 }
 .siteNav a {
   color: #666;
@@ -187,8 +192,8 @@ img {
   float: left;
 }
 
-.index-icons-sprite, .icon-arrow-down {
-  background-image: url('../images/index-icons-sd5da9f499e.png');
+.index-icons-sprite, .icon-arrow-down, .goto-top, .goto-top:hover {
+  background-image: url('../images/index-icons-s36abb8078c.png');
   background-repeat: no-repeat;
 }
 
@@ -197,6 +202,7 @@ img {
   margin: 17.5px 6px;
   width: 8px;
   height: 5px;
+  overflow: hidden;
   background-position: 0 0;
 }
 
@@ -237,7 +243,125 @@ img {
 }
 
 /*
- * @title:网站的reset和基础通用样式;
+ * @title:footer通用;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-2 11:25:17;
+ */
+.rl-desc,
+.footer-main-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  border-top: 1px solid #d5d5d5;
+}
+
+.rl-desc {
+  padding-top: 16px;
+  height: 184px;
+  color: #666;
+}
+.rl-desc dl {
+  float: left;
+  width: 230px;
+}
+.rl-desc dt {
+  font-size: 16px;
+  height: 32px;
+  line-height: 32px;
+}
+.rl-desc a {
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  color: #666;
+}
+.rl-desc a:hover {
+  text-decoration: underline;
+}
+.rl-desc:before, .rl-desc:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.rl-desc:after {
+  clear: both;
+}
+.rl-desc .rl-map {
+  float: right;
+  width: 230px;
+  height: 156px;
+  background: url('../images/map.png?1449027405') no-repeat;
+}
+.rl-desc .map-title {
+  font-size: 16px;
+  line-height: 30px;
+}
+.rl-desc .map-desc {
+  margin-top: 6px;
+}
+.rl-desc .map-acts {
+  text-align: right;
+}
+
+.footer-copyright {
+  height: 120px;
+  background-color: #000000;
+}
+.footer-copyright .copyright {
+  margin-top: 20px;
+  float: right;
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-rlInfo {
+  padding-top: 20px;
+  font-size: 16px;
+}
+.footer-rlInfo a {
+  color: #fff;
+}
+.footer-rlInfo a:hover {
+  text-decoration: underline;
+}
+.footer-rlInfo .separator {
+  margin: 0 16px;
+  color: #666;
+}
+
+.footer-pics {
+  margin-top: 16px;
+}
+.footer-pics a {
+  margin-right: 12px;
+}
+.footer-pics img {
+  border-radius: 4px;
+}
+
+.goto-top {
+  position: fixed;
+  _position: absolute;
+  right: 40px;
+  bottom: 50px;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-position: 0 -61px;
+  cursor: pointer;
+}
+.goto-top:active, .goto-top.goto_top-active {
+  background-position: 0 -5px;
+}
+.goto-top:hover {
+  background-position: 0 -5px;
+}
+
+/*
+ * @title:首页样式;
  * @desc:;
  * @author: VictoriaZhang;
  * @datetime: 2015-11-30 16:23:37;
@@ -273,11 +397,102 @@ img {
 }
 
 .custom-container {
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
 
 .custom-wrap {
+  width: 1920px;
   position: relative;
-  overflow: hidden;
+}
+
+/*首页商品推荐*/
+.item-box {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.item-bd {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.odd-item,
+.even-item {
+  position: relative;
+}
+
+.odd-item .item-conn {
+  float: right;
+}
+
+.even-item .item-conn {
+  float: left;
+}
+
+.rcmd-wrap .web-name {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #999;
+}
+.rcmd-wrap .item-conn {
+  width: 660px;
+  margin-top: 170px;
+}
+.rcmd-wrap .product-title {
+  margin-top: 20px;
+  font-size: 60px;
+  color: #202020;
+  font-weight: bold;
+}
+.rcmd-wrap .product-paras {
+  margin-top: 50px;
+}
+.rcmd-wrap .product-digest {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #595959;
+  line-height: 40px;
+}
+.rcmd-wrap .acts {
+  margin-top: 60px;
+}
+.rcmd-wrap .btn-link-a,
+.rcmd-wrap .btn-link-b,
+.rcmd-wrap .btn-link-c,
+.rcmd-wrap .btn-link-d {
+  font-size: 22px;
+}
+.rcmd-wrap .btn-link-a,
+.rcmd-wrap .btn-link-c,
+.rcmd-wrap .btn-link-d {
+  display: inline-block;
+  width: 270px;
+  text-align: center;
+}
+.rcmd-wrap .btn-link-a {
+  height: 70px;
+  line-height: 70px;
+  background-color: #b4802f;
+  color: #fff;
+  border-radius: 35px;
+}
+.rcmd-wrap .btn-link-b {
+  color: #202020;
+}
+.rcmd-wrap .btn-link-c {
+  border: 2px solid #b4802f;
+  color: #b4802f;
+  height: 66px;
+  line-height: 66px;
+}
+.rcmd-wrap .btn-link-d {
+  border: 1px solid #e0e0e0;
+  color: #b4802f;
+  height: 66px;
+  line-height: 66px;
+  background-color: #fff;
 }

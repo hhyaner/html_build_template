@@ -5,9 +5,8 @@ require 'compass/import-once/activate'
 # http_path = "/"
 css_dir = "release/css"
 sass_dir = "src/sass"
-images_dir = "src/images/"
-# javascripts_dir = "javascripts"
-# sprite_load_path = "sprite_images"
+images_dir = "release/images/"
+sprite_load_path = "src/images/"
 generated_images_dir = "release/images/"
 
 # http_generated_images_path = "http://image.sucool.com/"

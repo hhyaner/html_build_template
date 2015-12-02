@@ -1,0 +1,119 @@
+@import 'utils/_variable';
+@import 'compass';
+@import "compass/utilities/sprites";
+@import "index-icons/*.png";
+/*
+ * @title:footer通用;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-2 11:25:17;
+ */
+
+.rl-desc,
+.footer-main-wrap {
+    width: $cw_main;
+    margin: 0 auto;
+}
+
+.footer {
+    border-top: 1px solid #d5d5d5;
+}
+
+.rl-desc {
+    padding-top: 16px;
+    height: 184px;
+    color: $c_light;
+    dl {
+        float: left;
+        width: 230px;
+    }
+    dt {
+        font-size: 16px;
+        height: 32px;
+        line-height: 32px;
+    }
+    a {
+        display: block;
+        height: 22px;
+        line-height: 22px;
+        color: $c_light;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        line-height: 0
+    }
+    &:after {
+        clear: both
+    }
+    .rl-map {
+        float: right;
+        width: 230px;
+        height: 156px;
+        background: image-url('map.png') no-repeat;
+    }
+    .map-title {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .map-desc {
+        margin-top: 6px;
+    }
+    .map-acts {
+        text-align: right;
+    }
+}
+
+.footer-copyright {
+    height: 120px;
+    background-color: #000000;
+    .copyright{
+        margin-top: 20px;
+        float: right;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+.footer-rlInfo {
+    padding-top: 20px;
+    font-size: 16px;
+    a {
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .separator {
+        margin: 0 16px;
+        color: $c_light;
+    }
+}
+.footer-pics{
+    margin-top: 16px;
+    a{
+        margin-right: 12px;
+    }
+    img{
+        border-radius: 4px;
+    }
+}
+.goto-top {
+    position: fixed;
+    _position:absolute;
+    right: 40px;
+    bottom: 50px;
+    display: block;
+    width: index-icons-sprite-width(goto_top);
+    height: index-icons-sprite-height(goto_top);
+    @include index-icons-sprite(goto_top);
+    cursor: pointer;
+
+    &:hover{
+        @include index-icons-sprite(goto_top-active);
+    }
+}

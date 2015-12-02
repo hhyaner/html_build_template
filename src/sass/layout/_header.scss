@@ -20,6 +20,7 @@
         line-height: 40px;
         _display:inline;
         _zoom:1;
+        font-family: "Microsoft Yahei";
     }
     a {
         color: $c_light;
@@ -55,9 +56,11 @@
     .menu-hd a {
     	display: inline-block;
         margin-left: 24px;
+
     }
     .menu-name{
 		float: left;
+
     }
 }
 
@@ -68,6 +71,7 @@
 	margin: (40 - index-icons-sprite-height(arrow-down))/2 6px;
     width: index-icons-sprite-width(arrow-down);
     height: index-icons-sprite-height(arrow-down);
+    overflow: hidden;
     @include index-icons-sprite(arrow-down);
 }
 
