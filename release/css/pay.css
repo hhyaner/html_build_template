@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/*
+ * @title 变量
+ * @desc 基本每个界面都会用到
+ * @author VictoriaZhang
+ * @datetime 2015-12-1 9:41:34
+ */
+/* 
+ * 字体颜色
+ */
+/* 
+ * 字体大小
+ * fs: font-size
+ */
+/*
+ * 字体粗细
+ * ft:font-weight
+ */
+/*
+ * z-index的值
+ */
+/*
+ * @title:网站的reset和基础通用样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-11-30 16:23:37;
+ */
+body {
+  font-family: Tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+  -webkit-text-size-adjust: none;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+input, textarea, select, button {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+img {
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+em, i, address {
+  font-style: normal;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+input {
+  vertical-align: middle;
+}
+
+img {
+  border: 0 none;
+  height: auto;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+.fc {
+  clear: both;
+  width: 100%;
+}
+
+.fc::after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  content: '';
+}
+
+.fc-hl {
+  color: #cc0006;
+}
+
+.elps {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.hideMode {
+  display: none !important;
+}
+
+/*按钮的主要样式*/
+.btn-submit {
+  display: inline-block;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background-color: #cc0007;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-submit:active {
+  background-color: #ae0007;
+}
+
+.btn-submit:visited {
+  color: #fff;
+}
+
+/*
+ * @title:头部的样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-1 10:28:03;
+ * @warning: 更改头部的样式的时候要小心，
+             会牵涉到product.scss的样式，
+             商品详情页【立即订制】按钮在样式上就放在header上
+ */
+.siteNav {
+  background-color: #f2f2f2;
+  height: 40px;
+}
+.siteNav .menu {
+  float: left;
+}
+.siteNav .menu-hd {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  _display: inline;
+  _zoom: 1;
+  font-family: "Microsoft Yahei";
+}
+.siteNav a {
+  color: #666;
+}
+.siteNav a:hover {
+  color: #b4802f;
+}
+.siteNav .sn-separator {
+  margin: 0 10px;
+}
+.siteNav .loginInfo {
+  margin-left: 30px;
+}
+
+.siteNav-bd {
+  position: relative;
+}
+
+.siteNav-bd,
+.mainNav-bd {
+  margin: 0 auto;
+  width: 1200px;
+  color: #666;
+}
+
+.siteNav-left {
+  float: left;
+}
+
+.siteNav-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.siteNav-right .menu-hd a {
+  display: inline-block;
+  margin-left: 24px;
+}
+.siteNav-right .menu-name {
+  float: left;
+}
+
+.index-icons-sprite, .icon-arrow-down, .goto-top, .goto-top:hover {
+  background-image: url('../images/index-icons-s36abb8078c.png');
+  background-repeat: no-repeat;
+}
+
+.icon-arrow-down {
+  float: left;
+  margin: 17.5px 6px;
+  width: 8px;
+  height: 5px;
+  overflow: hidden;
+  background-position: 0 0;
+}
+
+.mainNav {
+  height: 114px;
+  line-height: 1;
+  border-bottom: 6px solid #000;
+}
+.mainNav .mainNav-wrap {
+  width: 100%;
+}
+.mainNav .logo {
+  width: 250px;
+  margin-left: -100%;
+  float: left;
+  margin-top: 36px;
+}
+.mainNav .nav-wrap {
+  width: 100%;
+  float: left;
+}
+.mainNav .nav {
+  margin-top: 60px;
+  margin-left: 326px;
+  font-size: 18px;
+}
+.mainNav .nav li {
+  float: left;
+  margin-right: 88px;
+}
+.mainNav .nav li.cur a {
+  color: #b4802f;
+}
+.mainNav .nav a {
+  color: #000;
+}
+.mainNav .nav a:hover {
+  color: #b4802f;
+}
+
+/*
+ * @title:footer通用;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-2 11:25:17;
+ */
+.rl-desc,
+.footer-main-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  border-top: 1px solid #d5d5d5;
+}
+
+.rl-desc {
+  padding-top: 16px;
+  height: 184px;
+  color: #666;
+}
+.rl-desc dl {
+  float: left;
+  width: 230px;
+}
+.rl-desc dt {
+  font-size: 16px;
+  height: 32px;
+  line-height: 32px;
+}
+.rl-desc a {
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  color: #666;
+}
+.rl-desc a:hover {
+  text-decoration: underline;
+}
+.rl-desc:before, .rl-desc:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.rl-desc:after {
+  clear: both;
+}
+.rl-desc .rl-map {
+  float: right;
+  width: 230px;
+  height: 156px;
+  background: url('../images/map.png?1449027405') no-repeat;
+}
+.rl-desc .map-title {
+  font-size: 16px;
+  line-height: 30px;
+}
+.rl-desc .map-desc {
+  margin-top: 6px;
+}
+.rl-desc .map-acts {
+  text-align: right;
+}
+
+.footer-copyright {
+  height: 120px;
+  background-color: #000000;
+}
+.footer-copyright .copyright {
+  margin-top: 20px;
+  float: right;
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-rlInfo {
+  padding-top: 20px;
+  font-size: 16px;
+}
+.footer-rlInfo a {
+  color: #fff;
+}
+.footer-rlInfo a:hover {
+  text-decoration: underline;
+}
+.footer-rlInfo .separator {
+  margin: 0 16px;
+  color: #666;
+}
+
+.footer-pics {
+  margin-top: 16px;
+}
+.footer-pics a {
+  margin-right: 12px;
+}
+.footer-pics img {
+  border-radius: 4px;
+}
+
+.goto-top {
+  position: fixed;
+  _position: absolute;
+  right: 40px;
+  bottom: 50px;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-position: 0 -61px;
+  cursor: pointer;
+}
+.goto-top:active, .goto-top.goto_top-active {
+  background-position: 0 -5px;
+}
+.goto-top:hover {
+  background-position: 0 -5px;
+}
+
+.form-icons-sprite, .result-wrap .icon-state {
+  background-image: url('../images/form-icons-sffdd9d6bb5.png');
+  background-repeat: no-repeat;
+}
+
+/*
+ * @title:支付结果;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-7 15:35:26;
+ */
+.result-container {
+  width: 1200px;
+  margin: 200px auto;
+}
+
+.result-wrap {
+  margin-left: 470px;
+  position: relative;
+  color: #000;
+  line-height: 1.5;
+}
+.result-wrap .result-title, .result-wrap .result-prompt {
+  font-weight: bold;
+}
+.result-wrap .result-title {
+  margin-top: 8px;
+  font-size: 30px;
+}
+.result-wrap .result-prompt {
+  font-size: 20px;
+}
+.result-wrap .more-opers {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.result-wrap .more-opers a {
+  color: #000;
+}
+.result-wrap .more-opers a:hover {
+  text-decoration: underline;
+}
+.result-wrap .more-opers span {
+  margin: 0 12px;
+}
+.result-wrap .icon-state {
+  position: absolute;
+  left: -190px;
+  top: 0;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  text-indent: -99em;
+  overflow: hidden;
+  background-position: 0 -41px;
+}

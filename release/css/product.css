@@ -376,7 +376,7 @@ img {
  * 有些界面仅用checkbox样式或radio样式
  */
 .form-icons-sprite, .dropdown-ui .icon-expander, .focus-ui .icon-expander, input[type='radio'], input[type='radio']:checked {
-  background-image: url('../images/form-icons-sa7a5e77f6f.png');
+  background-image: url('../images/form-icons-sffdd9d6bb5.png');
   background-repeat: no-repeat;
 }
 

@@ -1,0 +1,58 @@
+@import 'utils/_variable.scss';
+@import 'base/_base.scss';
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+@import "form-icons/*.png";
+/*
+ * @title:支付结果;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-7 15:35:26;
+ */
+.result-container{
+	width: $cw_main;
+	margin: 200px auto;
+}
+.result-wrap{
+	margin-left: 470px;
+	position: relative;
+	color: $c_em;
+	line-height: 1.5;
+
+	.result-title,.result-prompt{
+		font-weight: $ft-bold;
+	}
+	.result-title{
+		margin-top: 8px;
+		font-size: 30px;
+	}
+	.result-prompt{
+		font-size: 20px;
+	}
+	.more-opers{
+		margin-top: 20px;
+		font-size: 18px;
+
+		a{
+			color: $c_em;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		span{
+			margin: 0 12px;
+		}
+	}
+	.icon-state{
+		position: absolute;
+		left: -190px;
+		top: 0;
+		display: inline-block;
+		width: 130px;
+		height: 130px;
+		text-indent: -99em;
+
+        overflow: hidden;
+        @include form-icons-sprite(result-succ);
+	}
+}
