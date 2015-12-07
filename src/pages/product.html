@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情-仁兰私人订制</title>
+    <link rel="stylesheet" type="text/css" href="css/product.css">
+</head>
+
+<body>
+    <div class="rl-page">
+        @@include('header.html')
+        <!-- 订制form -->
+        <div class="order-container">
+            <!-- 居中 -->
+            <div class="cs-box">
+                <div class="order-switch">
+                    <a class="switch-btn">立即订制</a>
+                </div>
+            </div>
+            <div class="order-form">
+                <div class="form-wrap">
+                    <div class="form-box">
+                    <div class="cloumn-basic">
+                        <ul>
+                            <li class="item">
+                                <div class="textbox-ui">
+                                    <input type="text" id="txtUser"/>
+                                    <label for="txtUser" class="label">订制人姓名</label>
+                                    <label for="txtUser" class="invalid">请输入订制人姓名</label>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="textbox-ui error-ui">
+                                <input type="text" id="txtMobile">
+                                <label for="txtMobile" class="label">手机号码</label>
+                                <label for="txtMobile" class="invalid">手机号码</label></div>
+                            </li>
+                            <li class="item">
+                                <div class="textbox-ui">
+                                    <input type="text" id="txtPhone">
+                                    <label for="txtPhone" class="label">备用联系电话（固话/手机）</label>
+                                    <label for="txtPhone" class="invalid"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cloumn-addr">
+                        <ul>
+                            <li class="item addr-selects">
+                                <div class="dropdown-ui disable-ui">
+                                    <div class="text-box">
+                                        <span class="select-text">乡镇/街道</span>
+                                        <i class="icon-expander"></i>
+                                    </div>
+                                    <!-- .options-box的高度：li的高度*6+8px; 当朝左边的时候给其添加.toleft-->
+                                    <div class="options-box toleft" style="height:148px;right:0;">
+                                        <ul class="options">
+                                            <li>北京市</li>
+                                            <li class="selected-options">天津市</li>
+                                            <li>内蒙古自治区</li>
+                                            <li>辽宁省</li>
+                                            <li>吉林省</li>
+                                            <li>黑龙江省</li>
+                                            <li>上海市</li>
+                                            <li>江苏省</li>
+                                            <li>浙江省</li>
+                                            <li>安徽省</li>
+                                            <li>青海省</li>
+                                            <li  class="selected-options">宁夏回族自治区</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-ui disable-ui">
+                                    <div class="text-box">
+                                        <span class="select-text">区/县</span>
+                                        <i class="icon-expander"></i>
+                                    </div>
+                                    <!-- .options-box的高度：li的高度*6+8px -->
+                                    <div class="options-box" style="height:148px;">
+                                        <ul class="options">
+                                            <li>北京市</li>
+                                            <li class="selected-options">天津市</li>
+                                            <li>内蒙古自治区</li>
+                                            <li>辽宁省</li>
+                                            <li>吉林省</li>
+                                            <li>黑龙江省</li>
+                                            <li>上海市</li>
+                                            <li>江苏省</li>
+                                            <li>浙江省</li>
+                                            <li>安徽省</li>
+                                            <li>青海省</li>
+                                            <li  class="selected-options">宁夏回族自治区</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-ui disable-ui">
+                                    <div class="text-box">
+                                        <span class="select-text">城市</span>
+                                        <i class="icon-expander"></i>
+                                    </div>
+                                    <!-- .options-box的高度：li的高度*6+8px -->
+                                    <div class="options-box" style="height:148px;">
+                                        <ul class="options">
+                                            <li>北京市</li>
+                                            <li class="selected-options">天津市</li>
+                                            <li>内蒙古自治区</li>
+                                            <li>辽宁省</li>
+                                            <li>吉林省</li>
+                                            <li>黑龙江省</li>
+                                            <li>上海市</li>
+                                            <li>江苏省</li>
+                                            <li>浙江省</li>
+                                            <li>安徽省</li>
+                                            <li>青海省</li>
+                                            <li  class="selected-options">宁夏回族自治区</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-ui">
+                                    <div class="text-box">
+                                        <span class="select-text">省/直辖市</span>
+                                        <i class="icon-expander"></i>
+                                    </div>
+                                    <!-- .options-box的高度：li的高度*6+8px -->
+                                    <div class="options-box" style="height:148px;">
+                                        <ul class="options">
+                                            <li>北京市</li>
+                                            <li class="selected-options">天津市</li>
+                                            <li>内蒙古自治区</li>
+                                            <li>辽宁省</li>
+                                            <li>吉林省</li>
+                                            <li>黑龙江省</li>
+                                            <li>上海市</li>
+                                            <li>江苏省</li>
+                                            <li>浙江省</li>
+                                            <li>安徽省</li>
+                                            <li>青海省</li>
+                                            <li  class="selected-options">宁夏回族自治区</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item addr-detail">
+                                <div class="textbox-ui">
+                                    <label for="" class="label">详细地址</label>
+                                    <textarea name="" id=""></textarea>
+                                </div>
+                            </li>
+                            <li class="item addr-type">
+                                <ul>
+                                    <li><label for="rdbAddrType2"><input type="radio" name="rdbAddrType" id="rdbAddrType2">工作地址</label></li>
+                                    <li><label for="rdbAddrType1"><input type="radio" name="rdbAddrType" id="rdbAddrType1">家庭地址</label></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-operations">
+                    <a href="#" class="btn-submit">提交</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- /订制form -->
+        <div class="custom-container">
+            <!-- 动态设置其宽度为(curWidth+leftVal)  1660px，left为(1920-curWidth)/2    -250px-->
+            <div class="custom-wrap"  style="width:1920px; left:-250px;">
+                <p><img src="pic/detail_02.jpg" alt=""></p>
+                <p><img src="pic/detail_03.jpg" alt=""></p>
+                <p><img src="pic/detail_04.jpg" alt=""></p>
+                <p><img src="pic/detail_05.jpg" alt=""></p>
+                <p><img src="pic/detail_06.jpg" alt=""></p>
+            </div>
+        </div>
+        <div class="related-pros">
+            <h2 class="module-title">相关商品</h2>
+            <ul class="pro-list">
+                <li><a href="product.html"><img src="pic/pro_392-260.jpg" alt=""></a></li>
+                <li><a href="product.html"><img src="pic/pro_392-260_2.jpg" alt=""></a></li>
+                <li><a href="product.html"><img src="pic/pro_392-260_3.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        @@include('footer.html')
+    </div>
+</body>
+
+</html>

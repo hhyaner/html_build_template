@@ -6,6 +6,9 @@
  * @desc:;
  * @author: VictoriaZhang;
  * @datetime: 2015-12-1 10:28:03;
+ * @warning: 更改头部的样式的时候要小心，
+             会牵涉到product.scss的样式，
+             商品详情页【立即订制】按钮在样式上就放在header上
  */
 
 .siteNav {
@@ -18,8 +21,8 @@
         font-size: $fs_main;
         height: 40px;
         line-height: 40px;
-        _display:inline;
-        _zoom:1;
+        _display: inline;
+        _zoom: 1;
         font-family: "Microsoft Yahei";
     }
     a {
@@ -35,9 +38,11 @@
         margin-left: 30px;
     }
 }
-.siteNav-bd{
-	position: relative;
+
+.siteNav-bd {
+    position: relative;
 }
+
 .siteNav-bd,
 .mainNav-bd {
     margin: 0 auto;
@@ -50,25 +55,23 @@
 }
 
 .siteNav-right {
-	position: absolute;
-	right: 0;
-	top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     .menu-hd a {
-    	display: inline-block;
+        display: inline-block;
         margin-left: 24px;
-
     }
-    .menu-name{
-		float: left;
-
+    .menu-name {
+        float: left;
     }
 }
 
 @import "compass/utilities/sprites";
 @import "index-icons/*.png";
 .icon-arrow-down {
-	float: left;
-	margin: (40 - index-icons-sprite-height(arrow-down))/2 6px;
+    float: left;
+    margin: (40 - index-icons-sprite-height(arrow-down))/2 6px;
     width: index-icons-sprite-width(arrow-down);
     height: index-icons-sprite-height(arrow-down);
     overflow: hidden;

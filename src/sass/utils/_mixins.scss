@@ -30,6 +30,7 @@
     align-items: $para;
 }
 
+
 /*
  * 设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。
  */
@@ -43,11 +44,21 @@
     justify-content: $para;
 }
 
-@mixin flex-direction($para){
-    -webkit-flex-direction:$para;
-    -ms-flex-direction:$para;
-    flex-direction:$para;
+@mixin flex-direction($para) {
+    -webkit-flex-direction: $para;
+    -ms-flex-direction: $para;
+    flex-direction: $para;
 }
+
+
+/*文本若超出则显示省略号*/
+
+@mixin text-ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 
 /* 
  * form控件的样式,如checkbox,radio
@@ -55,7 +66,7 @@
  */
 
 @mixin formWiddgets($paras) {
-    $form_bg_size:40px;
+    $form_bg_size: 40px;
     @each $para in $paras {
         @if($para==checkbox) {
             input[type='checkbox'] {

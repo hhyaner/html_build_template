@@ -1,0 +1,211 @@
+@import 'utils/_variable.scss';
+@import 'utils/_mixins.scss';
+@import "compass/utilities/sprites";
+@import "form-icons/*.png";
+
+/*
+ * @title:form主要样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-4 17:04:02;
+ */
+
+
+/*
+ * 对应的DOM结构
+<div class="textbox-ui">
+    <input type="text" id="txtUser"/>
+    <label for="txtUser" class="label">订制人姓名</label>
+    <label for="txtUser" class="invalid">请输入订制人姓名</label>
+</div>
+状态：
+    默认.textbox-ui
+    焦点.focus-ui
+    错误.error-ui
+    编辑.editing-ui
+*/
+
+// textbox-ui
+.textbox-ui {
+    position: relative;
+    width: 510px;
+    height: 44px;
+    font-size: 16px;
+    input,
+    textarea {
+        border-radius: 4px;
+        border: 1px solid #b2b2b2;
+        outline: none;
+        box-sizing:content-box;
+        
+        &:focus {
+            border-color: $c_highlight;
+        }
+    }
+    input {
+        width: 486px;
+        padding: 10px 11px;
+        line-height: 22px;
+    }
+    textarea {
+        width: 488px;
+        height: 52px;
+        padding: 10px 11px;
+        text-align: left;
+        resize: vertical;
+    }
+    .label,
+    .invalid {
+        position: absolute;
+        top: 11px;
+        cursor: text;
+    }
+    .label {
+        left: 11px;
+        color: $c_light;
+    }
+    .invalid {
+        display: none;
+        right: 12px;
+        color: $c_warn;
+    }
+}
+
+// dropdown-ui
+.dropdown-ui {
+    width: 120px;
+    .text-box {
+        display: inline-block;
+        width: 118px;
+        height: 42px;
+        border: 1px solid #b2b2b2;
+        border-radius: 4px;
+        background-color: #fff;
+        position: relative;
+        cursor: pointer;
+        z-index: 2; // .text-box的z-index一定要比.options-box的高
+    }
+    .select-text {
+        display: inline-block;
+        margin-left: 12px;
+        margin-top: 13px;
+        width: 90px;
+        height: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 16px;
+        color: $c_lighter;
+        line-height: 1;
+    }
+    .icon-expander {
+        position: absolute;
+        right: 8px;
+        top: 19px;
+        display: inline-block;
+        width: form-icons-sprite-width(arrow-down);
+        height: form-icons-sprite-height(arrow-down);
+        overflow: hidden;
+        @include form-icons-sprite(arrow-down);
+    }
+    .options-box {
+        background-color: #fff;
+        border: 1px solid #b2b2b2;
+        position: absolute;
+        z-index: 3;
+        width: 252px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        font-size: 13px;
+        top: 42px;
+        border-radius: 0 4px 4px; //这个要看是向右还是向左
+        display: none;
+        &.toleft {
+            border-radius: 4px 0 4px 4px;
+        }
+    }
+    .options {
+        padding: 4px 0 4px 6px;
+        width: 240px;
+        &:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+        li {
+            float: left;
+            padding: 0 10px;
+            margin-right: 20px;
+            width: 80px;
+            height: 28px;
+            line-height: 28px;
+            @include text-ellipsis();
+            cursor: pointer;
+            color: $c_main;
+            &:hover {
+                color: $c_light;
+            }
+            &.selected-options {
+                color: $c_light;
+                background-color: #ededed;
+            }
+        }
+    }
+}
+
+.disable-ui {
+    .text-box {
+        background-color: #f2f2f2;
+    }
+}
+
+.error-ui {
+    input {
+        border-color: $c_warn;
+    }
+    .invalid {
+        display: block;
+    }
+}
+
+.focus-ui {
+    input,
+    textarea,
+    .text-box,
+    .options-box {
+        border-color: $c_highlight;
+    }
+    // dropdown-ui
+    .text-box {
+        border-bottom: none;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        z-index: 4;
+    }
+    .options-box {
+        display: block;
+    }
+    .icon-expander {
+        @include form-icons-sprite(arrow-up);
+    }
+}
+
+.editing-ui {
+    .label {
+        display: none;
+    }
+}
+
+input[type='radio'] {
+    display: inline-block;
+    margin-right: 4px;
+    -webkit-appearance: none;
+    width: form-icons-sprite-width(radio);
+    height: form-icons-sprite-height(radio);
+    @include form-icons-sprite(radio);
+    vertical-align: text-bottom;
+
+    &:checked {
+        @include form-icons-sprite(radio-selected);
+    }
+}

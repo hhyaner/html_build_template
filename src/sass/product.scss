@@ -1,0 +1,165 @@
+@import 'utils/_variable.scss';
+@import 'base/_base.scss';
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+@import 'components/_form.scss';
+
+/*
+ * @title:商品详情样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-4 14:55:03;
+ */
+
+
+/* 
+ * 超出部分的主要样式
+ * 全网站1920处通用样式
+ */
+
+.custom-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.custom-wrap {
+    width: 1920px;
+    position: relative;
+}
+
+// 立即订制
+.order-switch {
+    position: absolute;
+    right: 0;
+    top: -75px;
+    .switch-btn {
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        font-size: 18px;
+        background-color: #dcdcdc;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 20px;
+        cursor: pointer;
+        &:hover,
+        &.selected {
+            background-color: #a2732a;
+        }
+    }
+}
+
+.order-container {
+    .cs-box {
+        position: relative;
+    }
+    .form-wrap {
+        position: relative;
+        margin-top: 26px;
+    }
+    .cs-box,
+    .form-wrap {
+        width: $cw_main;
+        margin: 0 auto;
+    }
+}
+
+.order-form {
+    position: absolute;
+    z-index: 1001;
+    top: 160px;
+    width: 100%;
+    height: 230px;
+    background-color: #fff;
+    border-bottom: 1px solid #efefef;
+    box-shadow: 0px 1px 5px 0px #b1b1b1;
+
+    .item {
+        margin-top: 20px;
+    }
+}
+
+.cloumn-basic,
+.cloumn-addr {
+    float: left;
+    width: 50%;
+}
+
+.addr-selects {
+    position: relative;
+    height: 44px;
+    _zoom: 1;
+    .dropdown-ui {
+        float: right;
+        margin-left: 10px;
+    }
+}
+
+.addr-detail {
+    height: 74px;
+    .textbox-ui{
+        float: right;
+    }
+}
+
+.addr-type {
+    margin-top: 14px;
+    color: $c_light;
+    li {
+        float: right;
+        margin-left: 18px;
+    }
+}
+.form-operations{
+    position: absolute;
+    left: 525px;
+    top: 160px;
+
+    .btn-submit{
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+        font-size: 30px;
+        border-radius: 50%;
+
+        background-color: #b4802f;
+        &:hover{
+            background-color: #a2732a;
+        }
+    }
+}
+
+// 相关商品
+.related-pros{
+    width: $cw_main;
+    margin: 160px auto;
+    border-top: 2px dashed #eeeeee;
+
+    .module-title{
+        margin: 80px 0 60px 0;
+        text-align: center;
+        font-size: 30px;
+        color: $c_em;
+        font-weight: $ft-normal;
+    }
+    .pro-list{
+        height: 260px;
+        width: 1212px;
+        
+        li{
+            float: left;
+            margin-right: 12px;
+            width: 392px;
+            height: 260px;
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #eeeeee;
+        }
+    }
+}

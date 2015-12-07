@@ -26,7 +26,7 @@
  * @datetime: 2015-11-30 16:23:37;
  */
 body {
-  font: 12px/1.5 Tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+  font-family: Tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
   -webkit-text-size-adjust: none;
 }
 
@@ -135,6 +135,9 @@ img {
  * @desc:;
  * @author: VictoriaZhang;
  * @datetime: 2015-12-1 10:28:03;
+ * @warning: 更改头部的样式的时候要小心，
+             会牵涉到product.scss的样式，
+             商品详情页【立即订制】按钮在样式上就放在header上
  */
 .siteNav {
   background-color: #f2f2f2;

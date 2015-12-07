@@ -1,0 +1,723 @@
+@charset "UTF-8";
+/*
+ * @title 变量
+ * @desc 基本每个界面都会用到
+ * @author VictoriaZhang
+ * @datetime 2015-12-1 9:41:34
+ */
+/* 
+ * 字体颜色
+ */
+/* 
+ * 字体大小
+ * fs: font-size
+ */
+/*
+ * 字体粗细
+ * ft:font-weight
+ */
+/*
+ * z-index的值
+ */
+/*
+ * @title:网站的reset和基础通用样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-11-30 16:23:37;
+ */
+body {
+  font-family: Tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+  -webkit-text-size-adjust: none;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+input, textarea, select, button {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+img {
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+em, i, address {
+  font-style: normal;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+input {
+  vertical-align: middle;
+}
+
+img {
+  border: 0 none;
+  height: auto;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+.fc {
+  clear: both;
+  width: 100%;
+}
+
+.fc::after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  content: '';
+}
+
+.fc-hl {
+  color: #cc0006;
+}
+
+.elps {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.hideMode {
+  display: none !important;
+}
+
+/*按钮的主要样式*/
+.btn-submit {
+  display: inline-block;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background-color: #cc0007;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-submit:active {
+  background-color: #ae0007;
+}
+
+.btn-submit:visited {
+  color: #fff;
+}
+
+/*
+ * @title:头部的样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-1 10:28:03;
+ * @warning: 更改头部的样式的时候要小心，
+             会牵涉到product.scss的样式，
+             商品详情页【立即订制】按钮在样式上就放在header上
+ */
+.siteNav {
+  background-color: #f2f2f2;
+  height: 40px;
+}
+.siteNav .menu {
+  float: left;
+}
+.siteNav .menu-hd {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  _display: inline;
+  _zoom: 1;
+  font-family: "Microsoft Yahei";
+}
+.siteNav a {
+  color: #666;
+}
+.siteNav a:hover {
+  color: #b4802f;
+}
+.siteNav .sn-separator {
+  margin: 0 10px;
+}
+.siteNav .loginInfo {
+  margin-left: 30px;
+}
+
+.siteNav-bd {
+  position: relative;
+}
+
+.siteNav-bd,
+.mainNav-bd {
+  margin: 0 auto;
+  width: 1200px;
+  color: #666;
+}
+
+.siteNav-left {
+  float: left;
+}
+
+.siteNav-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.siteNav-right .menu-hd a {
+  display: inline-block;
+  margin-left: 24px;
+}
+.siteNav-right .menu-name {
+  float: left;
+}
+
+.index-icons-sprite, .icon-arrow-down, .goto-top, .goto-top:hover {
+  background-image: url('../images/index-icons-s36abb8078c.png');
+  background-repeat: no-repeat;
+}
+
+.icon-arrow-down {
+  float: left;
+  margin: 17.5px 6px;
+  width: 8px;
+  height: 5px;
+  overflow: hidden;
+  background-position: 0 0;
+}
+
+.mainNav {
+  height: 114px;
+  line-height: 1;
+  border-bottom: 6px solid #000;
+}
+.mainNav .mainNav-wrap {
+  width: 100%;
+}
+.mainNav .logo {
+  width: 250px;
+  margin-left: -100%;
+  float: left;
+  margin-top: 36px;
+}
+.mainNav .nav-wrap {
+  width: 100%;
+  float: left;
+}
+.mainNav .nav {
+  margin-top: 60px;
+  margin-left: 326px;
+  font-size: 18px;
+}
+.mainNav .nav li {
+  float: left;
+  margin-right: 88px;
+}
+.mainNav .nav li.cur a {
+  color: #b4802f;
+}
+.mainNav .nav a {
+  color: #000;
+}
+.mainNav .nav a:hover {
+  color: #b4802f;
+}
+
+/*
+ * @title:footer通用;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-2 11:25:17;
+ */
+.rl-desc,
+.footer-main-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  border-top: 1px solid #d5d5d5;
+}
+
+.rl-desc {
+  padding-top: 16px;
+  height: 184px;
+  color: #666;
+}
+.rl-desc dl {
+  float: left;
+  width: 230px;
+}
+.rl-desc dt {
+  font-size: 16px;
+  height: 32px;
+  line-height: 32px;
+}
+.rl-desc a {
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  color: #666;
+}
+.rl-desc a:hover {
+  text-decoration: underline;
+}
+.rl-desc:before, .rl-desc:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.rl-desc:after {
+  clear: both;
+}
+.rl-desc .rl-map {
+  float: right;
+  width: 230px;
+  height: 156px;
+  background: url('../images/map.png?1449027405') no-repeat;
+}
+.rl-desc .map-title {
+  font-size: 16px;
+  line-height: 30px;
+}
+.rl-desc .map-desc {
+  margin-top: 6px;
+}
+.rl-desc .map-acts {
+  text-align: right;
+}
+
+.footer-copyright {
+  height: 120px;
+  background-color: #000000;
+}
+.footer-copyright .copyright {
+  margin-top: 20px;
+  float: right;
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-rlInfo {
+  padding-top: 20px;
+  font-size: 16px;
+}
+.footer-rlInfo a {
+  color: #fff;
+}
+.footer-rlInfo a:hover {
+  text-decoration: underline;
+}
+.footer-rlInfo .separator {
+  margin: 0 16px;
+  color: #666;
+}
+
+.footer-pics {
+  margin-top: 16px;
+}
+.footer-pics a {
+  margin-right: 12px;
+}
+.footer-pics img {
+  border-radius: 4px;
+}
+
+.goto-top {
+  position: fixed;
+  _position: absolute;
+  right: 40px;
+  bottom: 50px;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-position: 0 -61px;
+  cursor: pointer;
+}
+.goto-top:active, .goto-top.goto_top-active {
+  background-position: 0 -5px;
+}
+.goto-top:hover {
+  background-position: 0 -5px;
+}
+
+/*
+ * 定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。
+ */
+/*
+ * 设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。
+ */
+/*文本若超出则显示省略号*/
+/* 
+ * form控件的样式,如checkbox,radio
+ * 有些界面仅用checkbox样式或radio样式
+ */
+.form-icons-sprite, .dropdown-ui .icon-expander, .focus-ui .icon-expander, input[type='radio'], input[type='radio']:checked {
+  background-image: url('../images/form-icons-sa7a5e77f6f.png');
+  background-repeat: no-repeat;
+}
+
+/*
+ * @title:form主要样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-4 17:04:02;
+ */
+/*
+ * 对应的DOM结构
+<div class="textbox-ui">
+    <input type="text" id="txtUser"/>
+    <label for="txtUser" class="label">订制人姓名</label>
+    <label for="txtUser" class="invalid">请输入订制人姓名</label>
+</div>
+状态：
+    默认.textbox-ui
+    焦点.focus-ui
+    错误.error-ui
+    编辑.editing-ui
+*/
+.textbox-ui {
+  position: relative;
+  width: 510px;
+  height: 44px;
+  font-size: 16px;
+}
+.textbox-ui input,
+.textbox-ui textarea {
+  border-radius: 4px;
+  border: 1px solid #b2b2b2;
+  outline: none;
+  box-sizing: content-box;
+}
+.textbox-ui input:focus,
+.textbox-ui textarea:focus {
+  border-color: #b4802f;
+}
+.textbox-ui input {
+  width: 486px;
+  padding: 10px 11px;
+  line-height: 22px;
+}
+.textbox-ui textarea {
+  width: 488px;
+  height: 52px;
+  padding: 10px 11px;
+  text-align: left;
+  resize: vertical;
+}
+.textbox-ui .label,
+.textbox-ui .invalid {
+  position: absolute;
+  top: 11px;
+  cursor: text;
+}
+.textbox-ui .label {
+  left: 11px;
+  color: #666;
+}
+.textbox-ui .invalid {
+  display: none;
+  right: 12px;
+  color: #fa4b4b;
+}
+
+.dropdown-ui {
+  width: 120px;
+}
+.dropdown-ui .text-box {
+  display: inline-block;
+  width: 118px;
+  height: 42px;
+  border: 1px solid #b2b2b2;
+  border-radius: 4px;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+.dropdown-ui .select-text {
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: 13px;
+  width: 90px;
+  height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #999;
+  line-height: 1;
+}
+.dropdown-ui .icon-expander {
+  position: absolute;
+  right: 8px;
+  top: 19px;
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  overflow: hidden;
+  background-position: 0 0;
+}
+.dropdown-ui .options-box {
+  background-color: #fff;
+  border: 1px solid #b2b2b2;
+  position: absolute;
+  z-index: 3;
+  width: 252px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 13px;
+  top: 42px;
+  border-radius: 0 4px 4px;
+  display: none;
+}
+.dropdown-ui .options-box.toleft {
+  border-radius: 4px 0 4px 4px;
+}
+.dropdown-ui .options {
+  padding: 4px 0 4px 6px;
+  width: 240px;
+}
+.dropdown-ui .options:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.dropdown-ui .options li {
+  float: left;
+  padding: 0 10px;
+  margin-right: 20px;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #333;
+}
+.dropdown-ui .options li:hover {
+  color: #666;
+}
+.dropdown-ui .options li.selected-options {
+  color: #666;
+  background-color: #ededed;
+}
+
+.disable-ui .text-box {
+  background-color: #f2f2f2;
+}
+
+.error-ui input {
+  border-color: #fa4b4b;
+}
+.error-ui .invalid {
+  display: block;
+}
+
+.focus-ui input,
+.focus-ui textarea,
+.focus-ui .text-box,
+.focus-ui .options-box {
+  border-color: #b4802f;
+}
+.focus-ui .text-box {
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 4;
+}
+.focus-ui .options-box {
+  display: block;
+}
+.focus-ui .icon-expander {
+  background-position: 0 -5px;
+}
+
+.editing-ui .label {
+  display: none;
+}
+
+input[type='radio'] {
+  display: inline-block;
+  margin-right: 4px;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background-position: 0 -25px;
+  vertical-align: text-bottom;
+}
+input[type='radio']:checked {
+  background-position: 0 -9px;
+}
+
+/*
+ * @title:商品详情样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-4 14:55:03;
+ */
+/* 
+ * 超出部分的主要样式
+ * 全网站1920处通用样式
+ */
+.custom-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-wrap {
+  width: 1920px;
+  position: relative;
+}
+
+.order-switch {
+  position: absolute;
+  right: 0;
+  top: -75px;
+}
+.order-switch .switch-btn {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #dcdcdc;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.order-switch .switch-btn:hover, .order-switch .switch-btn.selected {
+  background-color: #a2732a;
+}
+
+.order-container .cs-box {
+  position: relative;
+}
+.order-container .form-wrap {
+  position: relative;
+  margin-top: 26px;
+}
+.order-container .cs-box,
+.order-container .form-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.order-form {
+  position: absolute;
+  z-index: 1001;
+  top: 160px;
+  width: 100%;
+  height: 230px;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+  box-shadow: 0px 1px 5px 0px #b1b1b1;
+}
+.order-form .item {
+  margin-top: 20px;
+}
+
+.cloumn-basic,
+.cloumn-addr {
+  float: left;
+  width: 50%;
+}
+
+.addr-selects {
+  position: relative;
+  height: 44px;
+  _zoom: 1;
+}
+.addr-selects .dropdown-ui {
+  float: right;
+  margin-left: 10px;
+}
+
+.addr-detail {
+  height: 74px;
+}
+.addr-detail .textbox-ui {
+  float: right;
+}
+
+.addr-type {
+  margin-top: 14px;
+  color: #666;
+}
+.addr-type li {
+  float: right;
+  margin-left: 18px;
+}
+
+.form-operations {
+  position: absolute;
+  left: 525px;
+  top: 160px;
+}
+.form-operations .btn-submit {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: #b4802f;
+}
+.form-operations .btn-submit:hover {
+  background-color: #a2732a;
+}
+
+.related-pros {
+  width: 1200px;
+  margin: 160px auto;
+  border-top: 2px dashed #eeeeee;
+}
+.related-pros .module-title {
+  margin: 80px 0 60px 0;
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  font-weight: normal;
+}
+.related-pros .pro-list {
+  height: 260px;
+  width: 1212px;
+}
+.related-pros .pro-list li {
+  float: left;
+  margin-right: 12px;
+  width: 392px;
+  height: 260px;
+}
+.related-pros .pro-list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+}
