@@ -665,7 +665,7 @@ input[type='radio']:checked {
 .account-box .acct-operations {
   position: absolute;
   left: 154px;
-  bottom: -75px;
+  bottom: -65px;
 }
 .account-box .btn-code {
   position: absolute;
