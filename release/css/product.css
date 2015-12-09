@@ -376,7 +376,7 @@ img {
  * 有些界面仅用checkbox样式或radio样式
  */
 .form-icons-sprite, .dropdown-ui .icon-expander, .focus-ui .icon-expander, input[type='radio'], input[type='radio']:checked {
-  background-image: url('../images/form-icons-sffdd9d6bb5.png');
+  background-image: url('../images/form-icons-s95da62784d.png');
   background-repeat: no-repeat;
 }
 
@@ -567,11 +567,11 @@ input[type='radio'] {
   -webkit-appearance: none;
   width: 16px;
   height: 16px;
-  background-position: 0 -25px;
+  background-position: 0 -53px;
   vertical-align: text-bottom;
 }
 input[type='radio']:checked {
-  background-position: 0 -9px;
+  background-position: 0 -37px;
 }
 
 /*

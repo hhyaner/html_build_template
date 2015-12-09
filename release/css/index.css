@@ -365,6 +365,336 @@ img {
 }
 
 /*
+ * 定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。
+ */
+/*
+ * 设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。
+ */
+/*文本若超出则显示省略号*/
+/* 
+ * form控件的样式,如checkbox,radio
+ * 有些界面仅用checkbox样式或radio样式
+ */
+.form-icons-sprite, .dropdown-ui .icon-expander, .focus-ui .icon-expander, input[type='radio'], input[type='radio']:checked, .account-box .btn-open, .account-box .btn-off {
+  background-image: url('../images/form-icons-s95da62784d.png');
+  background-repeat: no-repeat;
+}
+
+/*
+ * @title:form主要样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-4 17:04:02;
+ */
+/*
+ * 对应的DOM结构
+<div class="textbox-ui">
+    <input type="text" id="txtUser"/>
+    <label for="txtUser" class="label">订制人姓名</label>
+    <label for="txtUser" class="invalid">请输入订制人姓名</label>
+</div>
+状态：
+    默认.textbox-ui
+    焦点.focus-ui
+    错误.error-ui
+    编辑.editing-ui
+*/
+.textbox-ui {
+  position: relative;
+  width: 510px;
+  height: 44px;
+  font-size: 16px;
+}
+.textbox-ui input,
+.textbox-ui textarea {
+  border-radius: 4px;
+  border: 1px solid #b2b2b2;
+  outline: none;
+  box-sizing: content-box;
+}
+.textbox-ui input:focus,
+.textbox-ui textarea:focus {
+  border-color: #b4802f;
+}
+.textbox-ui input {
+  width: 486px;
+  padding: 10px 11px;
+  line-height: 22px;
+}
+.textbox-ui textarea {
+  width: 488px;
+  height: 52px;
+  padding: 10px 11px;
+  text-align: left;
+  resize: vertical;
+}
+.textbox-ui .label,
+.textbox-ui .invalid {
+  position: absolute;
+  top: 11px;
+  cursor: text;
+}
+.textbox-ui .label {
+  left: 11px;
+  color: #666;
+}
+.textbox-ui .invalid {
+  display: none;
+  right: 12px;
+  color: #fa4b4b;
+}
+
+.dropdown-ui {
+  width: 120px;
+}
+.dropdown-ui .text-box {
+  display: inline-block;
+  width: 118px;
+  height: 42px;
+  border: 1px solid #b2b2b2;
+  border-radius: 4px;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+.dropdown-ui .select-text {
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: 13px;
+  width: 90px;
+  height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #999;
+  line-height: 1;
+}
+.dropdown-ui .icon-expander {
+  position: absolute;
+  right: 8px;
+  top: 19px;
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  overflow: hidden;
+  background-position: 0 0;
+}
+.dropdown-ui .options-box {
+  background-color: #fff;
+  border: 1px solid #b2b2b2;
+  position: absolute;
+  z-index: 3;
+  width: 252px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 13px;
+  top: 42px;
+  border-radius: 0 4px 4px;
+  display: none;
+}
+.dropdown-ui .options-box.toleft {
+  border-radius: 4px 0 4px 4px;
+}
+.dropdown-ui .options {
+  padding: 4px 0 4px 6px;
+  width: 240px;
+}
+.dropdown-ui .options:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.dropdown-ui .options li {
+  float: left;
+  padding: 0 10px;
+  margin-right: 20px;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #333;
+}
+.dropdown-ui .options li:hover {
+  color: #666;
+}
+.dropdown-ui .options li.selected-options {
+  color: #666;
+  background-color: #ededed;
+}
+
+.disable-ui .text-box {
+  background-color: #f2f2f2;
+}
+
+.error-ui input {
+  border-color: #fa4b4b;
+}
+.error-ui .invalid {
+  display: block;
+}
+
+.focus-ui input,
+.focus-ui textarea,
+.focus-ui .text-box,
+.focus-ui .options-box {
+  border-color: #b4802f;
+}
+.focus-ui .text-box {
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 4;
+}
+.focus-ui .options-box {
+  display: block;
+}
+.focus-ui .icon-expander {
+  background-position: 0 -5px;
+}
+
+.editing-ui .label {
+  display: none;
+}
+
+input[type='radio'] {
+  display: inline-block;
+  margin-right: 4px;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background-position: 0 -53px;
+  vertical-align: text-bottom;
+}
+input[type='radio']:checked {
+  background-position: 0 -37px;
+}
+
+/*
+ * @title:弹出层的登录注册样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-9 15:00:30;
+ */
+.overlay {
+  background-color: #000;
+  filter: alpha(opacity=30);
+  opacity: .3;
+  -webkit-user-select: none;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 999;
+}
+
+.rl-pop {
+  position: absolute;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.account-box {
+  width: 440px;
+  height: 440px;
+  font-family: "Microsoft Yahei";
+}
+.account-box .acct-tab {
+  height: 76px;
+}
+.account-box .acct-tab li {
+  float: left;
+  width: 220px;
+  height: 76px;
+  line-height: 76px;
+  background-color: #f2f2f2;
+}
+.account-box .acct-tab li.cur {
+  background-color: #fff;
+}
+.account-box .acct-tab a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+}
+.account-box .fields {
+  margin: 60px 0;
+  padding: 0 40px;
+}
+.account-box .field {
+  margin-top: 20px;
+}
+.account-box .textbox-ui {
+  width: 360px;
+}
+.account-box .textbox-ui input {
+  width: 338px;
+}
+.account-box .fp-btn {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  overflow: hidden;
+}
+.account-box .btn-open {
+  background-position: 0 -23px;
+}
+.account-box .btn-off {
+  background-position: 0 -9px;
+}
+.account-box .field-forget {
+  text-align: right;
+}
+.account-box .field-forget a {
+  color: #b4802f;
+}
+.account-box .field-forget a:hover {
+  text-decoration: underline;
+}
+.account-box .acct-operations {
+  position: absolute;
+  left: 154px;
+  bottom: -75px;
+}
+.account-box .btn-code {
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  display: inline-block;
+  padding: 7px;
+  font-size: 16px;
+  color: #999;
+  background-color: #f2f2f2;
+  line-height: 1;
+}
+.account-box .btn-code:hover {
+  text-decoration: underline;
+}
+.account-box .btn-submit {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: #b4802f;
+}
+.account-box .btn-submit:hover {
+  background-color: #a2732a;
+}
+
+/*
  * @title:首页样式;
  * @desc:;
  * @author: VictoriaZhang;

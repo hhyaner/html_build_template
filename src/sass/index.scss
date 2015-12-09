@@ -2,14 +2,15 @@
 @import 'base/_base.scss';
 @import 'layout/_header.scss';
 @import 'layout/_footer.scss';
-
+@import 'components/_form.scss';
+@import 'layout/account.scss';
+@import "form-icons/*.png";
 /*
  * @title:首页样式;
  * @desc:;
  * @author: VictoriaZhang;
  * @datetime: 2015-11-30 16:23:37;
  */
-
 
 .rl-page {
     min-width: $cw_main;

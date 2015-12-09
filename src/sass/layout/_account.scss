@@ -1,0 +1,124 @@
+@import 'utils/_variable.scss';
+/*
+ * @title:弹出层的登录注册样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-9 15:00:30;
+ */
+
+// 遮罩层
+.overlay {
+    background-color: #000;
+    filter: alpha(opacity=30);
+    opacity: .3;
+    -webkit-user-select: none;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 999;
+}
+
+.rl-pop {
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.account-box {
+    width: 440px;
+    height: 440px;
+    font-family: "Microsoft Yahei";
+    .acct-tab {
+        height: 76px;
+        li{
+            float: left;
+            width: 220px;
+            height: 76px;
+            line-height: 76px;
+            background-color: #f2f2f2;
+            &.cur{
+                background-color: #fff;
+            }
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: $c_em;
+        }
+    }
+    .fields{
+        margin: 60px 0;
+        padding: 0 40px;
+    }
+    .field{
+        margin-top: 20px;
+    }
+    .textbox-ui{
+        width: 360px;
+    }
+    .textbox-ui input{
+        width: 338px;
+    }
+    .fp-btn{
+        position: absolute;
+        right: 12px;
+        top: 16px;
+        display: inline-block;
+        width: form-icons-sprite-width(eye-open);
+        height: form-icons-sprite-height(eye-open);
+        overflow: hidden;
+    }
+    .btn-open{
+    @include form-icons-sprite(eye-open);
+    }
+    .btn-off{
+        @include form-icons-sprite(eye-close);
+    }
+    .field-forget{
+        text-align: right;
+        a{
+            color: $c_highlight;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .acct-operations{
+        position: absolute;
+        left: 154px;
+        bottom: -75px;
+    }
+    .btn-code{
+        position: absolute;
+        right: 12px;
+        top: 7px;
+        display: inline-block;
+        padding: 7px;
+        font-size: 16px;
+        color: $c_lighter;
+        background-color: #f2f2f2;
+        line-height: 1;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+    }
+    .btn-submit {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: #b4802f;
+}
+.btn-submit:hover {
+  background-color: #a2732a;
+}
+}
