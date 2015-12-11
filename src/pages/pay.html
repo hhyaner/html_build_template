@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>支付定金-仁兰私人定制</title>
+    <link rel="stylesheet" type="text/css" href="css/pay.css">
+</head>
+<body>
+	<div class="rl-page">
+        @@include('header.html')
+        <div class="container">
+        	<div class="pay-wrap">
+        		<div class="basic-info">
+	        		<h1 class="pro-title">中长款双面羊毛纯色大衣</h1>
+	        		<p class="pro-earnest">商品定金：<em>￥500.00</em></p>
+	        		<div class="prompt"><i class="icon-warn"></i>定金不退的哦！</div>
+	        		<div class="pro-img"><a href="product.html" target="_blank" title="点击我再去看看商品"><img src="pic/product_316-316.jpg" alt=""></a></div>
+        		</div>
+        		<div class="pay-info">
+        			<div class="pay-method">
+        				<span class="item-name">付款方式：</span>
+        				<ul class="item-panel methods">
+        					<li><input type="radio" id="pay-weixin"><label for="pay-weixin" class="pay-weixin"></label></li>
+        					<li><input type="radio" id="pay-alipay"><label for="pay-alipay" class="pay-alipay"></label></li>
+        				</ul>
+        			</div>
+        			<div class="pay-amount">支付金额：<em class="amount">￥50.00</em></div>
+        		</div>
+        		<div class="pay-actions">
+        			<a href="#" class="btn-pay">立即支付</a>
+        		</div>
+        	</div>
+        </div>
+        @@include('footer.html')
+    </div>
+</body>
+</html>

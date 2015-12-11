@@ -85,17 +85,16 @@
         }
         @if $para==radio {
             input[type='radio'] {
-                width: 16px;
-                height: 16px;
-                border: none;
-                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                display: inline-block;
+                margin-right: 4px;
                 -webkit-appearance: none;
-                border-radius: 2px;
-                background: image-url('t_form.png') no-repeat -20px -20px;
-                background-size: $form_bg_size;
-            }
-            input[type='radio']:checked {
-                background-position: -20px 0;
+                width: form-icons-sprite-width(radio);
+                height: form-icons-sprite-height(radio);
+                @include form-icons-sprite(radio);
+                vertical-align: text-bottom;
+                &:checked {
+                    @include form-icons-sprite(radio-selected);
+                }
             }
         }
     }

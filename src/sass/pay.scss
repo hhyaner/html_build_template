@@ -1,58 +1,173 @@
 @import 'utils/_variable.scss';
+@import 'utils/_mixins.scss';
 @import 'base/_base.scss';
 @import 'layout/_header.scss';
 @import 'layout/_footer.scss';
 @import "form-icons/*.png";
+@import "compass/utilities/sprites";
+@import "pay-icons/*.png";
+
 /*
- * @title:支付结果;
+ * @title 定金支付，支付结果;
  * @desc:;
  * @author: VictoriaZhang;
  * @datetime: 2015-12-7 15:35:26;
  */
-.result-container{
-	width: $cw_main;
-	margin: 200px auto;
+
+.result-container {
+    width: $cw_main;
+    margin: 200px auto;
 }
-.result-wrap{
-	margin-left: 470px;
-	position: relative;
-	color: $c_em;
-	line-height: 1.5;
 
-	.result-title,.result-prompt{
-		font-weight: $ft-bold;
-	}
-	.result-title{
-		margin-top: 8px;
-		font-size: 30px;
-	}
-	.result-prompt{
-		font-size: 20px;
-	}
-	.more-opers{
-		margin-top: 20px;
-		font-size: 18px;
-
-		a{
-			color: $c_em;
-			&:hover{
-				text-decoration: underline;
-			}
-		}
-		span{
-			margin: 0 12px;
-		}
-	}
-	.icon-state{
-		position: absolute;
-		left: -190px;
-		top: 0;
-		display: inline-block;
-		width: 130px;
-		height: 130px;
-		text-indent: -99em;
-
+.result-wrap {
+    margin-left: 470px;
+    position: relative;
+    color: $c_em;
+    line-height: 1.5;
+    .result-title,
+    .result-prompt {
+        font-weight: $ft-bold;
+    }
+    .result-title {
+        margin-top: 8px;
+        font-size: 30px;
+    }
+    .result-prompt {
+        font-size: 20px;
+    }
+    .more-opers {
+        margin-top: 20px;
+        font-size: 18px;
+        a {
+            color: $c_em;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        span {
+            margin: 0 12px;
+        }
+    }
+    .icon-state {
+        position: absolute;
+        left: -190px;
+        top: 0;
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        text-indent: -99em;
         overflow: hidden;
         @include form-icons-sprite(result-succ);
-	}
+    }
 }
+
+// 支付界面
+.container {
+    width: $cw_main;
+    margin: 60px auto 140px;
+}
+
+.pay-wrap {
+    position: relative;
+    margin-left: 434px;
+    width: 586px;
+    line-height: 1;
+    .pro-title {
+        font-size: 30px;
+        font-weight: $ft-bold;
+        color: $c_em;
+    }
+    .pro-earnest {
+        margin-top: 33px;
+        font-size: 24px;
+        color: #f94b4a;
+    }
+    .prompt {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px 0;
+        border: 1px solid #e9e9e9;
+        background-color: #fff8f5;
+        font-size: 14px;
+        color: $c_em;
+    }
+    .icon-warn {
+        display: inline-block;
+        margin: 0 10px;
+        width: pay-icons-sprite-width(warn);
+        height: pay-icons-sprite-height(warn);
+        @include pay-icons-sprite(warn);
+        vertical-align: bottom;
+    }
+    .pro-img {
+        position: absolute;
+        left: -434px;
+        top: 0;
+    }
+    .pay-info {
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top:1px solid #e6e6e6;
+        font-size: 16px;
+    }
+    .pay-method {
+        *zoom: 1;
+        &:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+    }
+    .pay-weixin,
+    .pay-alipay {
+        display: inline-block;
+        border: 1px solid #dedede;
+        width: pay-icons-sprite-width(pay-weixin);
+        height: pay-icons-sprite-height(pay-weixin);
+    }
+    .pay-weixin {
+        @include pay-icons-sprite(pay-weixin);
+    }
+    .pay-alipay {
+        @include pay-icons-sprite(pay-alipay);
+    }
+    .item-name {
+        float: left;
+        margin-top: 14px;
+    }
+    .item-panel {
+        float: left;
+    }
+    .methods {
+        li {
+            float: left;
+            margin-right: 30px;
+        }
+    }
+    input[type='radio'] {
+        vertical-align: 11px;
+        margin-right: 6px;
+    }
+    .pay-amount {
+        margin-top: 30px;
+        .amount {
+            color: #f94b4a;
+        }
+    }
+    .pay-actions {
+        margin-top: 30px;
+    }
+    .btn-pay {
+    	display: inline-block;
+    	font-size: 18px;
+    	padding: 15px 45px;
+    	border-radius: 38px;
+    	background-color: #b4802f;
+    	color: #fff;
+    	&:hover{
+    		background-color: #a2732a;
+    	}
+    }
+}
+
+@include formWiddgets(radio);

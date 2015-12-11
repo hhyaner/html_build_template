@@ -195,16 +195,4 @@
         display: none;
     }
 }
-input[type='radio'] {
-    display: inline-block;
-    margin-right: 4px;
-    -webkit-appearance: none;
-    width: form-icons-sprite-width(radio);
-    height: form-icons-sprite-height(radio);
-    @include form-icons-sprite(radio);
-    vertical-align: text-bottom;
-
-    &:checked {
-        @include form-icons-sprite(radio-selected);
-    }
-}
+@include formWiddgets(radio);
