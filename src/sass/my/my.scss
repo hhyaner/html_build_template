@@ -1,0 +1,198 @@
+@import 'utils/_variable.scss';
+@import 'base/_base.scss';
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+@import "compass/utilities/sprites";
+@import "my-icons/*.png";
+
+/*
+ * @title:个人中心样式;
+ * @desc:;
+ * @author: VictoriaZhang;
+ * @datetime: 2015-12-17 9:49:39;
+ */
+
+
+/*用户中心通用的结构*/
+
+.container {
+    width: $cw_main;
+    margin: 60px auto;
+    *zoom: 1;
+    &:after {
+        display: table;
+        clear: both;
+        content: ' ';
+    }
+    .container-six {
+        width: 100%;
+    }
+}
+
+.main-box {
+    float: left;
+    width: 100%;
+}
+
+.main-wrap {
+    width: 900px;
+    margin-left: 300px;
+}
+
+.menu-wrap {
+    float: left;
+    margin-left: -100%;
+    width: 140px;
+    line-height: 1;
+    .menu-head {
+        height: 36px;
+        font-size: 20px;
+        color: #000;
+        font-weight: $ft-bold;
+        border-bottom: 4px solid #000;
+    }
+    li {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 16px;
+    }
+    a {
+        position: relative;
+        color: #000;
+    }
+    li.cur a {
+        color: $c_highlight;
+    }
+    .icon-new {
+        position: absolute;
+        width: my-icons-sprite-width(new);
+        height: my-icons-sprite-height(new);
+        @include my-icons-sprite(new);
+        margin: -10px 0 0 10px;
+    }
+}
+
+.ui-page {
+    text-align: center;
+    height: 40px;
+
+    .ui-page-wrap {
+        // display: inline-block;
+        // *zoom: 1;
+        text-align: center;
+        a,span {
+            line-height: 40px;
+            margin: 0 10px;
+        }
+        a:hover,span{
+        	color: $c_highlight;
+        }
+    }
+    .btn-prev,
+    .btn-next {
+        display: inline-block;
+        width: my-icons-sprite-width(pager_next);
+        height: my-icons-sprite-height(pager_next);
+        overflow: hidden;
+        vertical-align: -14px;
+    }
+    a.btn-prev {
+        @include my-icons-sprite(pager_prev);
+        margin-right: 20px;
+        &:hover {
+            @include my-icons-sprite(pager_prev-active);
+        }
+    }
+    a.btn-next {
+    	margin-left: 20px;
+        @include my-icons-sprite(pager_next);
+        &:hover {
+            @include my-icons-sprite(pager_next-active);
+        }
+    }
+}
+
+
+/*用户中心通用的结构 end*/
+
+.tb-list {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    thead {
+        background-color: #f2f2f2;
+    }
+    thead th {
+        font-weight: $ft-normal;
+        color: $c_light;
+        font-size: 16px;
+        height: 40px;
+        vertical-align: middle;
+    }
+    .list-empty{
+    	text-align: center;
+    	padding: 40px 0;
+    }
+}
+
+.tb-list-order {
+    @extend .tb-list;
+    line-height: 1.5;
+    font-size: 16px;
+    a:hover {
+        text-decoration: underline;
+    }
+    tr.order-basis td {
+        line-height: 1;
+        padding-top: 60px;
+        height: 30px;
+        border-bottom: 1px solid #e6e6e6;
+        span {
+            margin-right: 60px;
+        }
+        .order-num {
+            color: $c_highlight;
+        }
+    }
+    tr.order-main td {
+        padding: 16px 0;
+        vertical-align: top;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .order-pro {
+        position: relative;
+        display: block;
+        height: 90px;
+    }
+    .order-proName {
+        width: 330px;
+        margin-left: 110px;
+        line-height: 1.5;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .order-proImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .order-proPrice {
+        text-align: center;
+    }
+    .order-opers {
+        a {
+            display: block;
+            text-align: center;
+        }
+        .submit {
+            color: $c_em;
+        }
+        .detail {
+            color: $c_light;
+        }
+    }
+    .ui-page{
+    	margin: 100px 0 40px 0;
+    }
+}

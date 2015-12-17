@@ -20,17 +20,6 @@
  * z-index的值
  */
 /*
- * 定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。
- */
-/*
- * 设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。
- */
-/*文本若超出则显示省略号*/
-/* 
- * form控件的样式,如checkbox,radio
- * 有些界面仅用checkbox样式或radio样式
- */
-/*
  * @title:网站的reset和基础通用样式;
  * @desc:;
  * @author: VictoriaZhang;
@@ -208,7 +197,7 @@ img {
 }
 
 .index-icons-sprite, .icon-arrow-down, .goto-top, .goto-top:hover {
-  background-image: url('../images/index-icons-s36abb8078c.png');
+  background-image: url('../../images/index-icons-s36abb8078c.png');
   background-repeat: no-repeat;
 }
 
@@ -309,7 +298,7 @@ img {
   float: right;
   width: 230px;
   height: 156px;
-  background: url('../images/map.png?1449027405') no-repeat;
+  background: url('../../images/map.png?1449027405') no-repeat;
 }
 .rl-desc .map-title {
   font-size: 16px;
@@ -376,184 +365,194 @@ img {
   background-position: 0 -5px;
 }
 
-.form-icons-sprite, .result-wrap .icon-state, input[type='radio'], input[type='radio']:checked {
-  background-image: url('../images/form-icons-s95da62784d.png');
-  background-repeat: no-repeat;
-}
-
-.pay-icons-sprite, .pay-wrap .icon-warn, .pay-wrap .pay-weixin, .pay-wrap .pay-alipay {
-  background-image: url('../images/pay-icons-sd1d0afa205.png');
+.my-icons-sprite, .menu-wrap .icon-new, .ui-page a.btn-prev, .ui-page a.btn-prev:hover, .ui-page a.btn-next, .ui-page a.btn-next:hover {
+  background-image: url('../../images/my-icons-sa2ec9eb8df.png');
   background-repeat: no-repeat;
 }
 
 /*
- * @title 定金支付，支付结果;
+ * @title:个人中心样式;
  * @desc:;
  * @author: VictoriaZhang;
- * @datetime: 2015-12-7 15:35:26;
+ * @datetime: 2015-12-17 9:49:39;
  */
-.result-container {
-  width: 1200px;
-  margin: 200px auto;
-}
-
-.result-wrap {
-  margin-left: 470px;
-  position: relative;
-  color: #000;
-  line-height: 1.5;
-}
-.result-wrap .result-title,
-.result-wrap .result-prompt {
-  font-weight: bold;
-}
-.result-wrap .result-title {
-  margin-top: 8px;
-  font-size: 30px;
-}
-.result-wrap .result-prompt {
-  font-size: 20px;
-}
-.result-wrap .more-opers {
-  margin-top: 20px;
-  font-size: 18px;
-}
-.result-wrap .more-opers a {
-  color: #000;
-}
-.result-wrap .more-opers a:hover {
-  text-decoration: underline;
-}
-.result-wrap .more-opers span {
-  margin: 0 12px;
-}
-.result-wrap .icon-state {
-  position: absolute;
-  left: -190px;
-  top: 0;
-  display: inline-block;
-  width: 130px;
-  height: 130px;
-  text-indent: -99em;
-  overflow: hidden;
-  background-position: 0 -69px;
-}
-
+/*用户中心通用的结构*/
 .container {
   width: 1200px;
-  margin: 60px auto 140px;
-}
-
-.pay-wrap {
-  position: relative;
-  margin-left: 434px;
-  width: 586px;
-  line-height: 1;
-}
-.pay-wrap .pro-title {
-  font-size: 30px;
-  font-weight: bold;
-  color: #000;
-}
-.pay-wrap .pro-earnest {
-  margin-top: 33px;
-  font-size: 24px;
-  color: #f94b4a;
-}
-.pay-wrap .prompt {
-  margin-top: 20px;
-  width: 100%;
-  padding: 12px 0;
-  border: 1px solid #e9e9e9;
-  background-color: #fff8f5;
-  font-size: 14px;
-  color: #000;
-}
-.pay-wrap .icon-warn {
-  display: inline-block;
-  margin: 0 10px;
-  width: 14px;
-  height: 14px;
-  background-position: 0 -80px;
-  vertical-align: bottom;
-}
-.pay-wrap .pro-img {
-  position: absolute;
-  left: -434px;
-  top: 0;
-}
-.pay-wrap .pay-info {
-  margin-top: 40px;
-  padding-top: 40px;
-  border-top: 1px solid #e6e6e6;
-  font-size: 16px;
-}
-.pay-wrap .pay-method {
+  margin: 60px auto;
   *zoom: 1;
 }
-.pay-wrap .pay-method:after {
-  content: ' ';
+.container:after {
   display: table;
   clear: both;
+  content: ' ';
 }
-.pay-wrap .pay-weixin,
-.pay-wrap .pay-alipay {
-  display: inline-block;
-  border: 1px solid #dedede;
-  width: 124px;
-  height: 40px;
-}
-.pay-wrap .pay-weixin {
-  background-position: 0 -40px;
-}
-.pay-wrap .pay-alipay {
-  background-position: 0 0;
-}
-.pay-wrap .item-name {
-  float: left;
-  margin-top: 14px;
-}
-.pay-wrap .item-panel {
-  float: left;
-}
-.pay-wrap .methods li {
-  float: left;
-  margin-right: 30px;
-}
-.pay-wrap input[type='radio'] {
-  vertical-align: 11px;
-  margin-right: 6px;
-}
-.pay-wrap .pay-amount {
-  margin-top: 30px;
-}
-.pay-wrap .pay-amount .amount {
-  color: #f94b4a;
-}
-.pay-wrap .pay-actions {
-  margin-top: 30px;
-}
-.pay-wrap .btn-pay {
-  display: inline-block;
-  font-size: 18px;
-  padding: 15px 45px;
-  border-radius: 38px;
-  background-color: #b4802f;
-  color: #fff;
-}
-.pay-wrap .btn-pay:hover {
-  background-color: #a2732a;
+.container .container-six {
+  width: 100%;
 }
 
-input[type='radio'] {
-  display: inline-block;
-  margin-right: 4px;
-  -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  background-position: 0 -53px;
-  vertical-align: text-bottom;
+.main-box {
+  float: left;
+  width: 100%;
 }
-input[type='radio']:checked {
-  background-position: 0 -37px;
+
+.main-wrap {
+  width: 900px;
+  margin-left: 300px;
+}
+
+.menu-wrap {
+  float: left;
+  margin-left: -100%;
+  width: 140px;
+  line-height: 1;
+}
+.menu-wrap .menu-head {
+  height: 36px;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 4px solid #000;
+}
+.menu-wrap li {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+}
+.menu-wrap a {
+  position: relative;
+  color: #000;
+}
+.menu-wrap li.cur a {
+  color: #b4802f;
+}
+.menu-wrap .icon-new {
+  position: absolute;
+  width: 24px;
+  height: 13px;
+  background-position: 0 0;
+  margin: -10px 0 0 10px;
+}
+
+.ui-page {
+  text-align: center;
+  height: 40px;
+}
+.ui-page .ui-page-wrap {
+  text-align: center;
+}
+.ui-page .ui-page-wrap a, .ui-page .ui-page-wrap span {
+  line-height: 40px;
+  margin: 0 10px;
+}
+.ui-page .ui-page-wrap a:hover, .ui-page .ui-page-wrap span {
+  color: #b4802f;
+}
+.ui-page .btn-prev,
+.ui-page .btn-next {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  vertical-align: -14px;
+}
+.ui-page a.btn-prev {
+  background-position: 0 -133px;
+  margin-right: 20px;
+}
+.ui-page a.btn-prev:active, .ui-page a.btn-prev.pager_prev-active {
+  background-position: 0 -93px;
+}
+.ui-page a.btn-prev:hover {
+  background-position: 0 -93px;
+}
+.ui-page a.btn-next {
+  margin-left: 20px;
+  background-position: 0 -53px;
+}
+.ui-page a.btn-next:active, .ui-page a.btn-next.pager_next-active {
+  background-position: 0 -13px;
+}
+.ui-page a.btn-next:hover {
+  background-position: 0 -13px;
+}
+
+/*用户中心通用的结构 end*/
+.tb-list, .tb-list-order {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.tb-list thead, .tb-list-order thead {
+  background-color: #f2f2f2;
+}
+.tb-list thead th, .tb-list-order thead th {
+  font-weight: normal;
+  color: #666;
+  font-size: 16px;
+  height: 40px;
+  vertical-align: middle;
+}
+.tb-list .list-empty, .tb-list-order .list-empty {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.tb-list-order {
+  line-height: 1.5;
+  font-size: 16px;
+}
+.tb-list-order a:hover {
+  text-decoration: underline;
+}
+.tb-list-order tr.order-basis td {
+  line-height: 1;
+  padding-top: 60px;
+  height: 30px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.tb-list-order tr.order-basis td span {
+  margin-right: 60px;
+}
+.tb-list-order tr.order-basis td .order-num {
+  color: #b4802f;
+}
+.tb-list-order tr.order-main td {
+  padding: 16px 0;
+  vertical-align: top;
+  border-bottom: 1px solid #e6e6e6;
+}
+.tb-list-order .order-pro {
+  position: relative;
+  display: block;
+  height: 90px;
+}
+.tb-list-order .order-proName {
+  width: 330px;
+  margin-left: 110px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.tb-list-order .order-proImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tb-list-order .order-proPrice {
+  text-align: center;
+}
+.tb-list-order .order-opers a {
+  display: block;
+  text-align: center;
+}
+.tb-list-order .order-opers .submit {
+  color: #000;
+}
+.tb-list-order .order-opers .detail {
+  color: #666;
+}
+.tb-list-order .ui-page {
+  margin: 100px 0 40px 0;
 }
